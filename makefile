@@ -36,7 +36,7 @@ LIBS = -lavutil -lavformat -lavcodec -lswscale -lz -lm
 # define the C source files
 SRCS = mp3Reader.c
 
-MUSICDIRECTORY := /media/sf_music
+MUSICDIRECTORY := /media/music
 
 # define the C object files 
 #
@@ -82,7 +82,7 @@ $(MAIN): $(OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@
 		
 run:
-	./$(MAIN) /media/sf_music
+	./$(MAIN)
 
 clean:
 	$(RM) *.o *~ $(MAIN)
